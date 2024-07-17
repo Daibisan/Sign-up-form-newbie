@@ -47,12 +47,11 @@ Users should be able to:
 This is my first time using SASS. It is very useful for nesting css and variable. 
 Example :
 
-
-<!-- $red: hsl(0, 100%, 74%);
+$red: hsl(0, 100%, 74%);
 $green: hsl(154, 59%, 51%);
 $blue: hsl(248, 32%, 49%);
 $darkBlue: hsl(249, 10%, 26%);
-$grayishBlue: hsl(246, 25%, 77%); -->
+$grayishBlue: hsl(246, 25%, 77%); 
 
 
 ## Author
