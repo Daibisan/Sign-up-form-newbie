@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Validation</title>
+  <!-- css -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <main id="content" class="flex">
+
+    <header id="main-header" class="flex flex-column">
+
+      <h1>Learn to code by watching others</h1>
+      <p id="main-p">See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but
+        understanding how developers think is invaluable.</p>
+
+    </header>
+
+    <div id="main-content" class="flex flex-column">
+
+      <header id="login-header" class="border-round box-shadow">
+        <h2><span style="font-weight: 600;">Try it free 7 days</span> then $20/mo. thereafter</h2>
+      </header>
+
+      <div id="login-content" class="border-round box-shadow">
+        <form id="inputs-form" class="flex flex-column" action="#" novalidate>
+          <ul id="inputs-container" class="flex flex-column">
+            <li class="input-list">
+              <input type="text" name="firstName" placeholder="First Name">
+              <img class="error-icon" src="./images/icon-error.svg" alt="error" hidden>
+              <p class="error-message" hidden>First Name cannot be empty</p>
+            </li>
+            <li class="input-list">
+              <input type="text" name="lastName" placeholder="Last Name">
+              <img class="error-icon" src="./images/icon-error.svg" alt="error" hidden>
+              <p class="error-message" hidden>Last Name cannot be empty</p>
+            </li>
+            <li class="input-list">
+              <input type="email" name="email" placeholder="Email Address" spellcheck="false">
+              <img class="error-icon" src="./images/icon-error.svg" alt="error" hidden>
+              <p class="error-message" hidden>Email Address cannot be empty</p>
+            </li>
+            <li class="input-list">
+              <input type="password" name="password" placeholder="Password">
+              <img class="error-icon" src="./images/icon-error.svg" alt="error" hidden>
+              <p class="error-message" hidden>Password cannot be empty</p>
+            </li>
+          </ul>
+
+          <button type="submit" id="submit-btn">
+            <p>CLAIM YOUR FREE TRIAL</p>
+          </button>
+
+          <p id="terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+        </form>
+
+      </div>
+    </div>
+  </main>
+</body>
+<script src="./index.js"></script>
+
+</html>

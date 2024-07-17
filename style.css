@@ -1,0 +1,358 @@
+/* CSS RESET */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.border-round {
+  border-radius: 10px;
+}
+
+.box-shadow {
+  box-shadow: 0 7px rgba(0, 0, 0, 0.15);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(./images/bg-intro-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#content {
+  width: clamp(320px, 90%, 1220px);
+  color: white;
+  gap: 3rem;
+}
+#content #main-header {
+  flex: 1;
+  justify-content: center;
+  gap: 1.2rem;
+  animation: fadein 1s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#content #main-header h1 {
+  font-weight: 600;
+  line-height: 1;
+}
+#content #main-header p {
+  line-height: 1.5;
+}
+#content #main-content {
+  flex: 0.8;
+  gap: 1.2rem;
+  animation: fadein 1.5s ease-in-out;
+}
+#content #main-content header {
+  padding-block: 1rem;
+  background-color: hsl(248, 32%, 49%);
+  text-align: center;
+  line-height: 1.5;
+}
+#content #main-content #login-content {
+  background-color: white;
+}
+#content #main-content #login-content #inputs-form {
+  gap: 1rem;
+}
+#content #main-content #login-content #inputs-form #inputs-container {
+  gap: 1rem;
+}
+#content #main-content #login-content #inputs-form #inputs-container input {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  border-style: none;
+  border: 0.5px solid rgba(0, 0, 0, 0.268);
+  border-radius: 5px;
+  outline: none;
+  transition: scale 0.2s ease-in-out;
+}
+#content #main-content #login-content #inputs-form #inputs-container input:focus {
+  border: 0.5px solid black;
+  scale: 1.03;
+}
+#content #main-content #login-content #inputs-form #inputs-container .error-message {
+  max-width: 100%;
+  margin-block: 0.5rem;
+  text-align: end;
+  font-style: italic;
+  font-weight: 500;
+  color: hsl(0, 100%, 74%);
+}
+#content #main-content #login-content #inputs-form #inputs-container .error-icon {
+  position: absolute;
+  transform: translate(-50px, 12px);
+}
+#content #main-content #login-content #inputs-form #inputs-container .border-red {
+  padding-right: 4rem;
+  border-color: hsl(0, 100%, 74%);
+  border-width: 3px;
+}
+#content #main-content #login-content #inputs-form #inputs-container .border-red:focus {
+  border: 3px solid hsl(0, 100%, 74%);
+}
+#content #main-content #login-content #inputs-form #submit-btn {
+  padding: 0.8rem 1rem;
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 400;
+  box-shadow: 0 3px rgba(25, 123, 28, 0.66);
+  border-style: none;
+  border-radius: 5px;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: scale 0.1s ease-in-out;
+}
+#content #main-content #login-content #inputs-form #submit-btn p {
+  max-width: 100%;
+}
+#content #main-content #login-content #inputs-form #submit-btn:hover {
+  background-color: hsl(154, 57%, 45%);
+}
+#content #main-content #login-content #inputs-form #submit-btn:active {
+  scale: 1.05;
+}
+#content #main-content #login-content #inputs-form #terms {
+  max-width: 100%;
+  color: hsl(246, 25%, 77%);
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#content #main-content #login-content #inputs-form #terms span {
+  font-weight: 600;
+  color: hsl(0, 100%, 74%);
+}
+#content #main-content #login-content #inputs-form #terms span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#content #main-content #login-content #inputs-form #terms span:active {
+  color: hsl(0, 56%, 54%);
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 1024px) {
+  #content p {
+    max-width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  h2 {
+    padding-inline: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    padding-inline: 2.5rem;
+  }
+}
+@media (max-width: 678px) {
+  #content {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+  #content #main-header,
+  #content #main-content {
+    padding: 1rem;
+  }
+  #content h1,
+  #content p {
+    text-align: center;
+  }
+}
+@media (min-width: 426px) {
+  #login-content {
+    padding: 2.2rem 2rem;
+  }
+  h1 {
+    font-size: 3.1rem;
+  }
+  #terms, .error-message {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 426px) {
+  #login-content {
+    padding: 1.7rem 2rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    padding-inline: 3.5rem;
+  }
+  p, h2, input {
+    font-size: 12px;
+  }
+  #main-p {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */
